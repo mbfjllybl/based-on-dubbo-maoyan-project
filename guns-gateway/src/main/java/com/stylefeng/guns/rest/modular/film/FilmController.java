@@ -5,6 +5,7 @@ import com.alibaba.dubbo.rpc.RpcContext;
 import com.stylefeng.guns.api.film.FilmAsyncServiceApi;
 import com.stylefeng.guns.api.film.FilmServiceApi;
 import com.stylefeng.guns.api.film.vo.*;
+import com.stylefeng.guns.api.order.OrderServiceAPI;
 import com.stylefeng.guns.rest.modular.film.vo.FilmConditionVO;
 import com.stylefeng.guns.rest.modular.film.vo.FilmIndexVO;
 import com.stylefeng.guns.rest.modular.film.vo.FilmRequestVO;
@@ -27,6 +28,7 @@ public class FilmController {
 
     @Reference(interfaceClass = FilmAsyncServiceApi.class, async = true)
     private FilmAsyncServiceApi filmAsyncServiceApi;
+
 
     @RequestMapping(value = "getIndex", method = RequestMethod.GET)
     public ResponseVO<FilmIndexVO> getIndex() {

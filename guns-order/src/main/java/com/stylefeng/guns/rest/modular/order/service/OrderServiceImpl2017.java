@@ -188,8 +188,10 @@ public class OrderServiceImpl2017 implements OrderServiceAPI {
 
     // 根据放映查询，获取所有的已售座位
     /*
+
         1  1,2,3,4
         1  5,6,7
+
      */
     @Override
     public String getSoldSeatsByFieldId(Integer fieldId) {
